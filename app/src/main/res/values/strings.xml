@@ -89,6 +89,13 @@
     <string name="apply_theme">Apply Theme</string>
     <string name="built_in_themes">Preset Themes</string>
     <string name="custom_themes">Imported Themes</string>
+    <string name="step_enable_keyboard">1. Enable in Settings</string>
+    <string name="step_select_keyboard">2. Select Active Keyboard</string>
+    <string name="step_completed_enabled">✓ Enabled in System Settings</string>
+    <string name="step_completed_selected">✓ Selected as Default Keyboard</string>
+    <string name="setup_all_done">xLakaBoardx is fully active and ready to type!</string>
+    <string name="setup_please_enable">Step 1: Please enable xLakaBoardx in Android Settings to get started.</string>
+    <string name="setup_please_select_default">Step 2: Please switch your active input method to xLakaBoardx.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res

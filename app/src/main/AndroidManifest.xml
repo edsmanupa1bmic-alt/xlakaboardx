@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:installLocation="auto">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
     <uses-permission
         android:name="android.permission.USE_FINGERPRINT"
         tools:node="remove" />
@@ -21,6 +24,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <!-- 1. Dedicated Launcher Setup Activity (Visible in App Drawer) -->
+        <activity
+            android:name=".ui.SetupActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:label="@string/app_launcher_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 2. Settings Hub Activity (MainActivity) -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:label="@string/app_name" />
+
         <activity
             android:name=".activities.SplashActivity"
             android:exported="false"
@@ -38,6 +60,49 @@
             android:exported="false"
             android:label="@string/manage_clipboard_items"
             android:parentActivityName=".activities.SettingsActivity" />
+
+        <!-- 3. Native IME Keyboard Services -->
+        <service
+            android:name=".ime.SinhalaIME"
+            android:directBootAware="true"
+            android:exported="true"
+            android:label="xLakaBoardx Sinhala Keyboard"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".SinhalaIME"
+            android:directBootAware="true"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".services.SinhalaIME"
+            android:directBootAware="true"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+        </service>
 
         <service
             android:name=".services.SimpleKeyboardIME"
