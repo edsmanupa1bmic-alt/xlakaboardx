@@ -1,0 +1,26 @@
+{
+  "name": "Lakmal Keyboard (xLakaBoardx)",
+  "short_name": "LakmalBoard",
+  "description": "Sinhala & English Smart Keyboard for Android & Web with Singlish Transliteration, Wijesekara Layout, and Word Prediction.",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#09090b",
+  "theme_color": "#2563eb",
+  "categories": ["utilities", "productivity"],
+  "icons": [
+    {
+      "src": "/graphics/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/graphics/icon.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ]
+}

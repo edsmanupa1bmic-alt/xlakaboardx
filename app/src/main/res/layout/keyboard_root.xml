@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/keyboard_root_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/keyboard_bg_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/keyboard_bg_dim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/keyboard_content_layer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/transparent"
+        android:paddingTop="6dp"
+        android:paddingBottom="8dp">
+
+        <!-- Row 0: Top Utility Bar (42dp) -->
+        <LinearLayout
+            android:id="@+id/flashboard_utility_bar"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginBottom="4dp"
+            android:paddingHorizontal="6dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@android:color/transparent">
+            
+            <TextView android:id="@+id/util_lang" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginHorizontal="2dp" android:background="@drawable/bg_utility_chip" android:gravity="center" android:text="En" android:textColor="#FFF" android:textSize="12sp" />
+            <ImageView android:id="@+id/util_emoji" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginHorizontal="2dp" android:background="@drawable/bg_utility_chip" android:padding="6dp" android:src="@drawable/ic_emoji_emotions_outline_vector" app:tint="#FFF" />
+            <ImageView android:id="@+id/util_settings" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginHorizontal="2dp" android:background="@drawable/bg_utility_chip" android:padding="6dp" android:src="@drawable/ic_tune_vector" app:tint="#FFF" />
+            <TextView android:id="@+id/util_font" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginHorizontal="2dp" android:background="@drawable/bg_utility_chip" android:gravity="center" android:text="Aa" android:textColor="#FFF" android:textSize="14sp" />
+            <ImageView android:id="@+id/util_voice" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginHorizontal="2dp" android:background="@drawable/bg_utility_chip" android:padding="6dp" android:src="@drawable/ic_microphone_vector" app:tint="#FFF" />
+            <ImageView android:id="@+id/util_clipboard" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginHorizontal="2dp" android:background="@drawable/bg_utility_chip" android:padding="6dp" android:src="@drawable/ic_clipboard_vector" app:tint="#FFF" />
+            <ImageView android:id="@+id/util_collapse" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginHorizontal="2dp" android:background="@drawable/bg_utility_chip" android:padding="6dp" android:src="@drawable/ic_keyboard_arrow_down_vector" app:tint="#FFF" />
+            
+        </LinearLayout>
+        
+        <!-- Word Suggestion Strip (Alternative to Utility Bar) -->
+        <LinearLayout
+            android:id="@+id/flashboard_suggestion_bar"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="@android:color/transparent">
+            <!-- Will be populated dynamically -->
+        </LinearLayout>
+
+        <!-- Row 1: Quick Emoji Ribbon (36dp) -->
+        <HorizontalScrollView
+            android:id="@+id/flashboard_emoji_ribbon"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginBottom="6dp"
+            android:scrollbars="none"
+            android:background="@android:color/transparent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🥺" android:textSize="22sp" android:layout_marginHorizontal="10dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="😔" android:textSize="22sp" android:layout_marginHorizontal="10dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💔" android:textSize="22sp" android:layout_marginHorizontal="10dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="😇" android:textSize="22sp" android:layout_marginHorizontal="10dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="😎" android:textSize="22sp" android:layout_marginHorizontal="10dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="😁" android:textSize="22sp" android:layout_marginHorizontal="10dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="😽" android:textSize="22sp" android:layout_marginHorizontal="10dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="❤️" android:textSize="22sp" android:layout_marginHorizontal="10dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🤤" android:textSize="22sp" android:layout_marginHorizontal="10dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="😘" android:textSize="22sp" android:layout_marginHorizontal="10dp"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Row 2: Dedicated Number Row (44dp) -->
+        <LinearLayout
+            android:id="@+id/row_numbers"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginBottom="4dp"
+            android:paddingHorizontal="4dp"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent">
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="49" app:florisLabel="1" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="50" app:florisLabel="2" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="51" app:florisLabel="3" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="52" app:florisLabel="4" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="53" app:florisLabel="5" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="54" app:florisLabel="6" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="55" app:florisLabel="7" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="56" app:florisLabel="8" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="57" app:florisLabel="9" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="48" app:florisLabel="0" />
+        </LinearLayout>
+
+        <!-- Row 3: Top QWERTY Row (48dp) -->
+        <LinearLayout
+            android:id="@+id/row_qwerty"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="4dp"
+            android:paddingHorizontal="2dp"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent">
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="113" app:florisLabel="q" app:florisHint="1" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="119" app:florisLabel="w" app:florisHint="2" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="101" app:florisLabel="e" app:florisHint="3" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="114" app:florisLabel="r" app:florisHint="4" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="116" app:florisLabel="t" app:florisHint="5" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="121" app:florisLabel="y" app:florisHint="6" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="117" app:florisLabel="u" app:florisHint="7" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="105" app:florisLabel="i" app:florisHint="8" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="111" app:florisLabel="o" app:florisHint="9" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="112" app:florisLabel="p" app:florisHint="0" />
+        </LinearLayout>
+
+        <!-- Row 4: Home Row (48dp) -->
+        <LinearLayout
+            android:id="@+id/row_home"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="14dp"
+            android:background="@android:color/transparent">
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="97" app:florisLabel="a" app:florisHint="@" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="115" app:florisLabel="s" app:florisHint="#" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="100" app:florisLabel="d" app:florisHint="$" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="102" app:florisLabel="f" app:florisHint="-" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="103" app:florisLabel="g" app:florisHint="&amp;" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="104" app:florisLabel="h" app:florisHint="_" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="106" app:florisLabel="j" app:florisHint="+" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="107" app:florisLabel="k" app:florisHint="(" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="108" app:florisLabel="l" app:florisHint=")" />
+        </LinearLayout>
+
+        <!-- Row 5: Bottom Row (48dp) -->
+        <LinearLayout
+            android:id="@+id/row_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="6dp"
+            android:paddingHorizontal="2dp"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent">
+            <!-- Shift (Clean Outline Up Arrow) (Weight 1.4) -->
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1.4" app:florisCode="-1" app:florisType="shift" />
+            
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7.2"
+                android:orientation="horizontal">
+                <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="122" app:florisLabel="z" app:florisHint="*" />
+                <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="120" app:florisLabel="x" app:florisHint="&quot;" />
+                <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="99" app:florisLabel="c" app:florisHint="'" />
+                <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="118" app:florisLabel="v" app:florisHint=":" />
+                <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="98" app:florisLabel="b" app:florisHint=";" />
+                <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="110" app:florisLabel="n" app:florisHint="!" />
+                <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1" app:florisCode="109" app:florisLabel="m" app:florisHint="?" />
+            </LinearLayout>
+
+            <!-- Backspace (Clean Outline Box with 'X') (Weight 1.4) -->
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" android:layout_weight="1.4" app:florisCode="-5" app:florisType="delete" />
+        </LinearLayout>
+
+        <!-- Row 6: Action Row (52dp) -->
+        <LinearLayout
+            android:id="@+id/row_action"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:paddingHorizontal="6dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@android:color/transparent">
+            
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="38dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" app:florisCode="-2" app:florisType="modifier" app:florisLabel="\?123" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="36dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" app:florisCode="-6" app:florisType="globe" />
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="28dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" app:florisCode="44" app:florisLabel="," />
+            
+            <!-- Spacebar Flex Weight 1, Height 42dp, MarginHorizontal 8dp -->
+            <org.fossify.keyboard.views.FlashboardKeyView 
+                android:layout_width="0dp" 
+                android:layout_height="42dp" 
+                android:layout_weight="1" 
+                android:layout_marginHorizontal="8dp"
+                app:florisCode="32" 
+                app:florisType="space" 
+                app:florisLabel="Flashboard" />
+                
+            <org.fossify.keyboard.views.FlashboardKeyView android:layout_width="28dp" android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp" app:florisCode="46" app:florisLabel="." />
+            
+            <!-- Enter Key Width 56dp, Height 42dp -->
+            <org.fossify.keyboard.views.FlashboardKeyView 
+                android:layout_width="56dp" 
+                android:layout_height="42dp"
+                android:layout_marginHorizontal="2dp" 
+                app:florisCode="-4" 
+                app:florisType="enter" />
+                
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

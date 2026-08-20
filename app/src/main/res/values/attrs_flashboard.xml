@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FlashboardKeyView">
+        <attr name="florisCode" format="integer" />
+        <attr name="florisType" format="string" />
+        <attr name="florisLabel" format="string" />
+        <attr name="florisHint" format="string" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,186 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+
+    <!-- Subtle Outer Glow / Tech Ring -->
+    <path
+        android:strokeColor="#304FFE"
+        android:strokeWidth="4"
+        android:pathData="M256,120 A136,136 0 1,1 255.9,120" />
+
+    <!-- Circuit Trace Lines radiating from center -->
+    <!-- Top Trace -->
+    <path
+        android:strokeColor="#00E5FF"
+        android:strokeWidth="6"
+        android:pathData="M256,180 L256,140 L290,140 L290,90" />
+    <path
+        android:fillColor="#FFD600"
+        android:pathData="M290,90 m-12,0 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0" />
+
+    <!-- Top-Right Trace -->
+    <path
+        android:strokeColor="#FF2E93"
+        android:strokeWidth="6"
+        android:pathData="M300,200 L340,170 L340,130 L370,130" />
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M370,130 m-12,0 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0" />
+
+    <!-- Right Trace -->
+    <path
+        android:strokeColor="#9C27B0"
+        android:strokeWidth="6"
+        android:pathData="M325,256 L365,256 L365,290 L400,290" />
+    <path
+        android:fillColor="#FFD600"
+        android:pathData="M400,290 m-12,0 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0" />
+
+    <!-- Bottom-Right Trace -->
+    <path
+        android:strokeColor="#FF2E93"
+        android:strokeWidth="6"
+        android:pathData="M295,310 L325,350 L355,350 L355,380" />
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M355,380 m-12,0 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0" />
+
+    <!-- Bottom Trace -->
+    <path
+        android:strokeColor="#00E5FF"
+        android:strokeWidth="6"
+        android:pathData="M256,330 L256,370 L220,370 L220,405" />
+    <path
+        android:fillColor="#FFD600"
+        android:pathData="M220,405 m-12,0 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0" />
+
+    <!-- Bottom-Left Trace -->
+    <path
+        android:strokeColor="#FF2E93"
+        android:strokeWidth="6"
+        android:pathData="M210,310 L170,340 L170,380 L140,380" />
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M140,380 m-12,0 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0" />
+
+    <!-- Left Trace -->
+    <path
+        android:strokeColor="#9C27B0"
+        android:strokeWidth="6"
+        android:pathData="M185,256 L145,256 L145,220 L110,220" />
+    <path
+        android:fillColor="#FFD600"
+        android:pathData="M110,220 m-12,0 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0" />
+
+    <!-- Top-Left Trace -->
+    <path
+        android:strokeColor="#FF2E93"
+        android:strokeWidth="6"
+        android:pathData="M215,200 L185,160 L155,160 L155,130" />
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M155,130 m-12,0 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0" />
+
+    <!-- Inner Circuit Nodes (Pink/Orange Circles) -->
+    <path
+        android:fillColor="#FF1776"
+        android:pathData="M256,180 m-16,0 a16,16 0 1,0 32,0 a16,16 0 1,0 -32,0" />
+    <path
+        android:fillColor="#FF9100"
+        android:pathData="M256,180 m-9,0 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0" />
+
+    <path
+        android:fillColor="#FF1776"
+        android:pathData="M309,202 m-16,0 a16,16 0 1,0 32,0 a16,16 0 1,0 -32,0" />
+    <path
+        android:fillColor="#FF9100"
+        android:pathData="M309,202 m-9,0 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0" />
+
+    <path
+        android:fillColor="#FF1776"
+        android:pathData="M332,256 m-16,0 a16,16 0 1,0 32,0 a16,16 0 1,0 -32,0" />
+    <path
+        android:fillColor="#FF9100"
+        android:pathData="M332,256 m-9,0 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0" />
+
+    <path
+        android:fillColor="#FF1776"
+        android:pathData="M309,309 m-16,0 a16,16 0 1,0 32,0 a16,16 0 1,0 -32,0" />
+    <path
+        android:fillColor="#FF9100"
+        android:pathData="M309,309 m-9,0 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0" />
+
+    <path
+        android:fillColor="#FF1776"
+        android:pathData="M256,332 m-16,0 a16,16 0 1,0 32,0 a16,16 0 1,0 -32,0" />
+    <path
+        android:fillColor="#FF9100"
+        android:pathData="M256,332 m-9,0 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0" />
+
+    <path
+        android:fillColor="#FF1776"
+        android:pathData="M202,309 m-16,0 a16,16 0 1,0 32,0 a16,16 0 1,0 -32,0" />
+    <path
+        android:fillColor="#FF9100"
+        android:pathData="M202,309 m-9,0 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0" />
+
+    <path
+        android:fillColor="#FF1776"
+        android:pathData="M180,256 m-16,0 a16,16 0 1,0 32,0 a16,16 0 1,0 -32,0" />
+    <path
+        android:fillColor="#FF9100"
+        android:pathData="M180,256 m-9,0 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0" />
+
+    <path
+        android:fillColor="#FF1776"
+        android:pathData="M202,202 m-16,0 a16,16 0 1,0 32,0 a16,16 0 1,0 -32,0" />
+    <path
+        android:fillColor="#FF9100"
+        android:pathData="M202,202 m-9,0 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0" />
+
+    <!-- Central Glowing Tech 'L' -->
+    <path
+        android:fillColor="#FFD600"
+        android:pathData="M236,205 L252,205 L252,290 L286,290 L286,305 L236,305 Z" />
+
+    <!-- Stylized "LAKABOARD" Tech Typography at Bottom -->
+    <!-- L -->
+    <path
+        android:fillColor="#FFD600"
+        android:pathData="M50,440 L62,440 L62,475 L80,475 L80,485 L50,485 Z" />
+    <!-- 4 / A -->
+    <path
+        android:fillColor="#FFD600"
+        android:pathData="M95,440 L95,485 L106,485 L106,468 L122,468 L122,485 L133,485 L133,440 L95,440 Z M106,450 L122,450 L122,459 L106,459 Z" />
+    <!-- K -->
+    <path
+        android:fillColor="#FFD600"
+        android:pathData="M148,440 L160,440 L160,458 L178,440 L194,440 L172,462 L195,485 L179,485 L160,466 L160,485 L148,485 Z" />
+    <!-- 4 / A -->
+    <path
+        android:fillColor="#FFD600"
+        android:pathData="M207,440 L207,485 L218,485 L218,468 L234,468 L234,485 L245,485 L245,440 L207,440 Z M218,450 L234,450 L234,459 L218,459 Z" />
+    <!-- B -->
+    <path
+        android:fillColor="#FFD600"
+        android:pathData="M260,440 L292,440 C299,440 304,445 304,452 C304,457 301,460 297,462 C302,464 305,468 305,473 C305,480 299,485 292,485 L260,485 Z M272,449 L272,458 L290,458 C292,458 294,456 294,454 C294,451 292,449 290,449 Z M272,466 L272,476 L292,476 C294,476 296,474 296,471 C296,468 294,466 292,466 Z" />
+    <!-- 0 / O -->
+    <path
+        android:fillColor="#FFD600"
+        android:pathData="M318,440 L350,440 C358,440 363,446 363,454 L363,471 C363,479 358,485 350,485 L318,485 C310,485 305,479 305,471 L305,454 C305,446 310,440 318,440 Z M318,451 L318,474 L350,474 L350,451 Z" />
+    <!-- 4 / A -->
+    <path
+        android:fillColor="#FFD600"
+        android:pathData="M375,440 L375,485 L386,485 L386,468 L402,468 L402,485 L413,485 L413,440 L375,440 Z M386,450 L402,450 L402,459 L386,459 Z" />
+    <!-- R -->
+    <path
+        android:fillColor="#FFD600"
+        android:pathData="M425,440 L452,440 C459,440 464,445 464,452 C464,458 460,463 454,464 L466,485 L453,485 L442,466 L437,466 L437,485 L425,485 Z M437,449 L437,458 L450,458 C452,458 454,456 454,454 C454,451 452,449 450,449 Z" />
+    <!-- D -->
+    <path
+        android:fillColor="#FFD600"
+        android:pathData="M475,440 L498,440 C506,440 511,446 511,454 L511,471 C511,479 506,485 498,485 L475,485 Z M487,451 L487,474 L498,474 C500,474 501,472 501,470 L501,455 C501,453 500,451 498,451 Z" />
+
+</vector>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lakmal Keyboard</string>
+    <string name="app_launcher_name">Lakmal Keyboard</string>
+    <string name="default_spacebar_label">Lakmal Keyboard</string>
+    <string name="subtype_sinhala_singlish">Lakmal Keyboard Sinhala (Singlish)</string>
+    <string name="subtype_sinhala_wijesekara">Lakmal Keyboard Sinhala (Wijesekara)</string>
+    <string name="subtype_english">Lakmal Keyboard English (US)</string>
+    <string name="redirection_note">Please enable Lakmal Keyboard on the next screen, to make it an available keyboard. Press \'Back\' once enabled.</string>
+    <string name="change_keyboard">Change Keyboard</string>
+    <!-- Clipboard -->
+    <string name="manage_clipboard_items">Manage clipboard items</string>
+    <string name="manage_clipboard_empty">Your clipboard is empty.</string>
+    <string name="manage_clipboard_label">Once you copy some text, it will show up here. You can also pin clips so they won\'t disappear later.</string>
+    <string name="clear_clipboard_data">Clear clipboard data</string>
+    <string name="clear_clipboard_data_confirmation">Are you sure you want to clear the clipboard data?</string>
+    <string name="clipboard">Clipboard</string>
+    <string name="clipboard_recent">Recent</string>
+    <string name="clipboard_current">Current</string>
+    <string name="clipboard_pinned">Pinned</string>
+    <string name="add_new_item">Add a new item</string>
+    <string name="manage_keyboard_languages">Manage keyboard languages</string>
+    <string name="manage_clips">You can manage or add clips here for quick access.</string>
+    <string name="clip_text">Clip text</string>
+    <string name="pin_text">Pin text</string>
+    <string name="text_pinned">Text has been pinned</string>
+    <string name="export_clipboard_items">Export clipboard items</string>
+    <string name="import_clipboard_items">Import clipboard items</string>
+    <!-- Accessibility -->
+    <string name="keycode_delete">Delete</string>
+    <string name="keycode_mode_change">Change keyboard type</string>
+    <string name="keycode_shift">Shift</string>
+    <string name="keycode_enter">Enter</string>
+    <string name="keycode_space">Spacebar</string>
+    <!-- Settings -->
+    <string name="layout_and_appearance">Layout &amp; appearance</string>
+    <string name="keypress">Keypress</string>
+    <string name="typing_and_input">Typing &amp; input</string>
+    <string name="show_clipboard_content">Show clipboard content if available</string>
+    <string name="show_popup">Show a popup on keypress</string>
+    <string name="vibrate_on_keypress">Vibrate on keypress</string>
+    <string name="sound_on_keypress">Sound on keypress</string>
+    <string name="sound_none">Off</string>
+    <string name="sound_system">Follow system</string>
+    <string name="sound_always">Always on</string>
+    <string name="keyboard_language">Keyboard language</string>
+    <string name="keyboard_height">Keyboard height</string>
+    <string name="show_key_borders">Show key borders</string>
+    <string name="show_numbers_row">Show numbers on a separate row</string>
+    <string name="start_sentences_capitalized">Start sentences with a capital letter</string>
+    <string name="smart_auto_correction">Smart Auto-Correction</string>
+    <string name="smart_auto_correction_summary">Automatically fix common spelling mistakes in Sinhala and English as you type</string>
+    <string name="show_emoji_key">Show emoji key</string>
+    <string name="show_language_switch_key">Show language switch key</string>
+    <!-- Emojis -->
+    <string name="emojis">Emojis</string>
+    <string name="recently_used">Recently used</string>
+    <string name="smileys_and_emotions">Smileys and emotions</string>
+    <string name="people_and_body">People and body</string>
+    <string name="animals_and_nature">Animals and nature</string>
+    <string name="food_and_drink">Food and drink</string>
+    <string name="travel_and_places">Travel and places</string>
+    <string name="activities">Activities</string>
+    <string name="objects">Objects</string>
+    <string name="symbols">Symbols</string>
+    <string name="flags">Flags</string>
+    <!-- Voice Input -->
+    <string name="voice_typing_method">Voice typing method</string>
+    <string name="switch_to_voice_typing">Switch to voice typing</string>
+
+    <!-- Themes & Stylesheets -->
+    <string name="themes_and_styles">Themes &amp; Stylesheets</string>
+    <string name="themes_summary">Built-in frosted skins and imported FlorisBoard themes</string>
+    <string name="import_floris_theme">Import Floris Theme</string>
+    <string name="import_floris_theme_desc">Import .json stylesheet or .flex/.zip package</string>
+    <string name="custom_layouts">Custom Keyboard Layouts</string>
+    <string name="custom_layouts_summary">Import and switch FlorisBoard layout JSON files</string>
+    <string name="import_floris_layout">Import Floris Layout</string>
+    <string name="theme_applied">Theme applied successfully</string>
+    <string name="layout_applied">Layout applied successfully</string>
+    <string name="theme_import_failed">Failed to import theme. Check file format.</string>
+    <string name="layout_import_failed">Failed to import layout. Check file format.</string>
+    <string name="delete_theme_confirm">Delete this custom theme?</string>
+    <string name="delete_layout_confirm">Delete this custom layout?</string>
+    <string name="active_theme">Active Theme</string>
+    <string name="active_layout">Active Layout</string>
+    <string name="preview">Preview</string>
+    <string name="theme_preview">Theme Preview</string>
+    <string name="apply_theme">Apply Theme</string>
+    <string name="built_in_themes">Preset Themes</string>
+    <string name="custom_themes">Imported Themes</string>
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
+    -->
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<input-method xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:icon="@mipmap/ic_launcher"
+    android:settingsActivity="org.fossify.keyboard.activities.SettingsActivity"
+    android:supportsInlineSuggestions="true"
+    tools:targetApi="r">
+
+    <subtype android:imeSubtypeMode="keyboard" android:imeSubtypeLocale="en_US" android:label="@string/subtype_english" />
+    <subtype android:imeSubtypeMode="keyboard" android:imeSubtypeLocale="si_LK" android:label="@string/subtype_sinhala_singlish" />
+    <subtype android:imeSubtypeMode="keyboard" android:imeSubtypeLocale="si_LK" android:label="@string/subtype_sinhala_wijesekara" />
+
+</input-method>

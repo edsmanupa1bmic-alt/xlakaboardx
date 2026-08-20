@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#131316">
+
+    <!-- Top Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/editor_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#181A20"
+        app:title="Theme Editor"
+        app:titleTextColor="#FFFFFF" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Live Preview -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Live Preview"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Embed the real keyboard layout as a preview -->
+            <FrameLayout
+                android:id="@+id/preview_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:layout_marginBottom="24dp">
+                <include layout="@layout/keyboard_view_keyboard" />
+            </FrameLayout>
+
+            <!-- Editor Controls -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Custom Background Image"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_bg_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enable Background Image"
+                android:textColor="#DDDDDD"
+                android:paddingVertical="8dp" />
+
+            <Button
+                android:id="@+id/btn_pick_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Image from Gallery"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Dim / Blur Sliders -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image Dimming (Opacity)"
+                android:textColor="#DDDDDD"
+                android:layout_marginTop="8dp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/slider_dim_opacity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:valueFrom="0.0"
+                android:valueTo="1.0"
+                android:stepSize="0.1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image Blur Radius (Android 12+)"
+                android:textColor="#DDDDDD"
+                android:layout_marginTop="8dp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/slider_blur_radius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:valueFrom="0.0"
+                android:valueTo="25.0"
+                android:stepSize="1.0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Key Translucency (Alpha 0-255)"
+                android:textColor="#DDDDDD"
+                android:layout_marginTop="8dp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/slider_key_translucency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:valueFrom="0.0"
+                android:valueTo="255.0"
+                android:stepSize="1.0" />
+
+            <!-- Colors & Branding -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Branding &amp; Colors"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Spacebar Branding Text"
+                android:textColorHint="#999999">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_spacebar_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TODO: Add simple color pickers if required, but for now apply button handles persistence -->
+            
+            <Button
+                android:id="@+id/btn_apply_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="32dp"
+                android:text="Apply Theme"
+                android:backgroundTint="#0066FF"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

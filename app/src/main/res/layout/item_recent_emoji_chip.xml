@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingStart="2dp"
+    android:paddingEnd="2dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp">
+
+    <TextView
+        android:id="@+id/recent_emoji_text"
+        android:layout_width="38dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/recent_emoji_chip_background"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textSize="20sp"
+        tools:text="❤️" />
+
+</FrameLayout>
